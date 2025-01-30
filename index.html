@@ -8,6 +8,22 @@
     <title>CSS Art - Rubber Duck</title>
   </head>
   <body>
+    <audio preload="auto" loop>
+      <source src="music.mp3" type="audio/mpeg" />
+    </audio>
+    <div class="music-modal-wrapper">
+      <div class="music-modal">
+        <h3>Enable Music</h3>
+        <div>
+          <button id="no-button">
+            <span>NO</span>
+          </button>
+          <button id="yes-button">
+            <span>YES</span>
+          </button>
+        </div>
+      </div>
+    </div>
     <div class="duck">
       <div class="duck__head-wrapper">
         <div class="duck__head">
@@ -30,5 +46,6 @@
       </div>
       <div class="ground"></div>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>

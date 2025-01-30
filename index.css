@@ -7,6 +7,7 @@
   --color-dark-pink: #7e2e4e;
   --color-dark-orange: #d45326;
   --color-light-yellow: #fef53a;
+  --color-translucent-pink: #af315d60;
 }
 
 * {
@@ -33,6 +34,11 @@ body {
   align-items: center;
   justify-content: center;
   background-color: var(--color-pink);
+}
+
+body::-webkit-scrollbar,
+audio {
+  display: none;
 }
 
 .duck {
@@ -329,27 +335,98 @@ body {
 .ground {
   width: 12.5rem;
   height: 0.875rem;
-  overflow: hidden;
-  position: relative;
   margin-left: 3.75rem;
   border-radius: 0.75rem;
   background-color: var(--color-dark-pink);
 }
 
-.ground::after {
+.music-modal-wrapper {
   top: 0;
-  content: "";
-  left: -100%;
+  left: 0;
+  z-index: 10;
   width: 100%;
   height: 100%;
-  position: absolute;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--color-dark-orange),
-    transparent
-  );
-  animation: shimmer 3s infinite;
+  display: flex;
+  padding: 20px;
+  position: fixed;
+  visibility: hidden;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  animation: fade-in 1s ease 1s forwards;
+  background-color: var(--color-translucent-pink);
+}
+
+.music-modal {
+  gap: 25px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  border-radius: 10px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 35px 40px 40px;
+  font-family: "system-ui", "Trebuchet MS", "Helvetica";
+}
+
+.music-modal h3 {
+  font-size: 24px;
+  color: var(--color-white);
+}
+
+.music-modal div {
+  gap: 15px;
+  display: flex;
+}
+
+.music-modal button {
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 15px 30px;
+  font-family: inherit;
+  color: var(--color-white);
+  background-color: transparent;
+}
+
+#no-button {
+  color: var(--color-white);
+  border: 2px solid var(--color-pink);
+  background-color: var(--color-translucent-pink);
+}
+
+#yes-button {
+  background-color: var(--color-pink);
+}
+
+.fade-out-animation {
+  animation: fade-out 1s ease forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 @keyframes move-up {
@@ -445,14 +522,5 @@ body {
   }
   10% {
     transform: rotate(0deg);
-  }
-}
-
-@keyframes shimmer {
-  0% {
-    left: -100%;
-  }
-  100% {
-    left: 100%;
   }
 }
