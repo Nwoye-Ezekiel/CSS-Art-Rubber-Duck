@@ -1,6 +1,5 @@
 :root {
   --color-white: #fff;
-  --color-blue: #01a0f5;
   --color-pink: #af315d;
   --color-black: #434453;
   --color-yellow: #fed72b;
@@ -44,8 +43,8 @@ body {
 .duck__head-wrapper {
   width: 9.4375rem;
   height: 9.375rem;
-  margin-left: 2.5rem;
   position: relative;
+  margin-left: 2.5rem;
 }
 
 .duck__head {
@@ -62,19 +61,45 @@ body {
   right: 2.625rem;
   width: 1.875rem;
   height: 0.625rem;
-  border-radius: 0.4375rem;
   position: absolute;
+  border-radius: 0.4375rem;
   background-color: var(--color-light-yellow);
+  animation: move-up 3s infinite ease-in-out 1.65s;
+}
+
+.duck__eye-container {
+  top: 2.9375rem;
+  width: 3.3125rem;
+  right: 1.9375rem;
+  height: 3.375rem;
+  position: absolute;
+}
+
+.duck__eye-container::before {
+  z-index: 5;
+  content: "";
+  width: 100%;
+  position: absolute;
+  background-color: var(--color-yellow);
+  animation: blink 3s infinite cubic-bezier(0.215, 0.61, 0.355, 1) 1.5s;
+}
+
+.duck__eye-container::after {
+  z-index: 5;
+  content: "";
+  width: 100%;
+  bottom: 0rem;
+  position: absolute;
+  background-color: var(--color-yellow);
+  animation: blink 3s infinite cubic-bezier(0.215, 0.61, 0.355, 1) 1.5s;
 }
 
 .duck__eye {
-  top: 2.9375rem;
-  right: 1.9375rem;
-  width: 3.3125rem;
-  height: 3.375rem;
+  width: 100%;
+  height: 100%;
   display: flex;
+  position: relative;
   border-radius: 50%;
-  position: absolute;
   align-items: center;
   justify-content: center;
   background-color: var(--color-white);
@@ -82,26 +107,18 @@ body {
 
 .duck__eye::before {
   content: "";
-  width: 100%;
-  height: 0.625rem;
-  bottom: -0.09375rem;
-  position: absolute;
-  background-color: var(--color-yellow);
-}
-
-.duck__eye::after {
-  content: "";
   width: 1.6875rem;
   height: 1.6875rem;
   border-radius: 50%;
   position: absolute;
   background-color: var(--color-black);
+  animation: move-eyes 6s infinite ease-in-out;
 }
 
 .duck__mouth {
   top: 3.5625rem;
-  left: -2.4375rem;
   width: 5.625rem;
+  left: -2.4375rem;
   height: 3.3125rem;
   position: absolute;
 }
@@ -113,8 +130,9 @@ body {
   width: 100%;
   height: 2.625rem;
   position: absolute;
-  border-radius: 0 2.3125rem 0 2.4375rem;
   background-color: var(--color-orange);
+  border-radius: 0 2.3125rem 0 2.4375rem;
+  animation: move-down 3s infinite ease-in-out;
 }
 
 .duck__mouth::after {
@@ -125,19 +143,21 @@ body {
   width: 5.0625rem;
   height: 1.125rem;
   position: absolute;
-  border-radius: 3.3125rem 1.25rem 1.875rem 0;
   background-color: var(--color-dark-orange);
+  animation: move-up 3s infinite ease-in-out;
+  border-radius: 3.3125rem 1.25rem 1.875rem 0;
 }
 
 .duck__nostril {
-  top: 3.9375rem;
-  left: 0.3125rem;
   z-index: 7;
   width: 1rem;
+  top: 3.9375rem;
+  left: 0.3125rem;
   height: 0.4375rem;
   position: absolute;
   border-radius: 0.3125rem;
   background-color: var(--color-dark-orange);
+  animation: move-down 3s infinite ease-in-out;
 }
 
 .duck__ears {
@@ -153,11 +173,13 @@ body {
   left: 0;
   z-index: 4;
   content: "";
-  width: 4.3125rem;
   height: 1.5rem;
+  width: 4.3125rem;
   position: absolute;
+  transform-origin: left;
   border-radius: 0 0.4375rem 1.75rem 0;
   background-color: var(--color-yellow);
+  animation: shake 3s infinite ease-in-out 1.65s;
 }
 
 .duck__ears::after {
@@ -170,17 +192,19 @@ body {
   position: absolute;
   border-radius: 0 0.4375rem 1.75rem 0;
   background-color: var(--color-orange);
+  animation: shake 3s infinite ease-in-out;
 }
 
 .duck__body {
   z-index: 8;
   width: 13.75rem;
   height: 8.125rem;
-  margin-top: -0.625rem;
-  margin-left: 2.5rem;
   position: relative;
+  margin-left: 2.5rem;
+  margin-top: -0.625rem;
   border-radius: 5.9375rem;
   background-color: var(--color-yellow);
+  animation: breathe 3s infinite cubic-bezier(0.37, 0, 0.63, 1) 1s;
 }
 
 .duck__wing {
@@ -189,23 +213,24 @@ body {
   width: 10.6875rem;
   height: 6.9375rem;
   position: absolute;
+  animation: shake 3s infinite 1.5s;
 }
 
 .duck__wing::before {
   left: 0;
   content: "";
-  width: 7.0625rem;
   height: 100%;
+  width: 7.0625rem;
   position: absolute;
   border-radius: 50%;
   background-color: var(--color-light-yellow);
 }
 
 .duck__wing::after {
-  right: 0.0625rem;
   content: "";
-  width: 7.0625rem;
   height: 100%;
+  right: 0.0625rem;
+  width: 7.0625rem;
   position: absolute;
   border-radius: 0 11.9375rem 0 0;
   background-color: var(--color-light-yellow);
@@ -213,10 +238,12 @@ body {
 
 .duck__tail {
   top: 0;
-  right: 3.3125rem;
   width: 10rem;
+  right: 3.3125rem;
   height: 13.4375rem;
   position: absolute;
+  transform-origin: bottom;
+  animation: shake 3s infinite;
 }
 
 .duck__tail::before {
@@ -251,7 +278,35 @@ body {
   margin-left: 6.5625rem;
 }
 
-.duck__legs-wrapper::before {
+.duck__left-leg,
+.duck__right-leg {
+  height: 100%;
+  width: 3.5rem;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+}
+
+.duck__left-leg {
+  right: 0;
+}
+
+.duck__right-leg {
+  left: 0;
+  transform-origin: bottom right;
+  animation: stamp 3s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+}
+
+.duck__left-leg::before,
+.duck__right-leg::before {
+  content: "";
+  height: 100%;
+  width: 0.75rem;
+  position: absolute;
+}
+
+.duck__left-leg::after,
+.duck__right-leg::after {
   left: 0;
   bottom: 0;
   content: "";
@@ -259,50 +314,145 @@ body {
   height: 0.75rem;
   position: absolute;
   border-radius: 0.53125rem;
-  background-color: var(--color-dark-orange);
 }
 
-.duck__legs-wrapper::after {
-  right: 0;
-  bottom: 0;
-  content: "";
-  width: 3.375rem;
-  height: 0.75rem;
-  position: absolute;
-  border-radius: 0.53125rem;
+.duck__left-leg::before,
+.duck__left-leg::after {
   background-color: var(--color-orange);
 }
 
-.duck__legs {
-  right: 1.125rem;
-  width: 2.625rem;
-  height: 100%;
-  position: absolute;
-  background-color: var(--color-pink);
-}
-
-.duck__legs::before {
-  left: 0;
-  content: "";
-  width: 0.75rem;
-  height: 100%;
-  position: absolute;
+.duck__right-leg::before,
+.duck__right-leg::after {
   background-color: var(--color-dark-orange);
-}
-
-.duck__legs::after {
-  right: 0;
-  content: "";
-  width: 0.75rem;
-  height: 100%;
-  position: absolute;
-  background-color: var(--color-orange);
 }
 
 .ground {
-  height: 0.875rem;
   width: 12.5rem;
+  height: 0.875rem;
+  overflow: hidden;
+  position: relative;
   margin-left: 3.75rem;
   border-radius: 0.75rem;
   background-color: var(--color-dark-pink);
+}
+
+.ground::after {
+  top: 0;
+  content: "";
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-dark-orange),
+    transparent
+  );
+  animation: shimmer 3s infinite;
+}
+
+@keyframes move-up {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  5% {
+    transform: translateY(-0.1875rem);
+  }
+  10% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes move-down {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  5% {
+    transform: translateY(0.1875rem);
+  }
+  10% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes blink {
+  0% {
+    height: 0rem;
+  }
+  5% {
+    height: 50%;
+  }
+  10% {
+    height: 0rem;
+  }
+}
+
+@keyframes move-eyes {
+  0% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translate(-0.0625rem);
+  }
+  75% {
+    transform: translate(0.0625rem);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(4deg);
+  }
+  5% {
+    transform: rotate(-3deg);
+  }
+  10% {
+    transform: rotate(3deg);
+  }
+  15% {
+    transform: rotate(-2deg);
+  }
+  20% {
+    transform: rotate(1deg);
+  }
+  25% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.01);
+  }
+}
+
+@keyframes stamp {
+  0% {
+    transform: rotate(5deg);
+  }
+  10% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
 }
