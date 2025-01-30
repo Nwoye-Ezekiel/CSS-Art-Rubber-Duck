@@ -151,7 +151,7 @@ audio {
   position: absolute;
   background-color: var(--color-dark-orange);
   animation: move-up 3s infinite ease-in-out;
-  border-radius: 3.3125rem 1rem 1.875rem 0;
+  border-radius: 3.3125rem 1.5rem 1.875rem 0;
 }
 
 .duck__nostril {
