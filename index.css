@@ -136,7 +136,7 @@ audio {
   height: 2.625rem;
   position: absolute;
   background-color: var(--color-orange);
-  border-radius: 0 2.3125rem 0 2.4375rem;
+  border-radius: 0 2.3125rem 0.2rem 2.4375rem;
   animation: move-down 3s infinite ease-in-out;
 }
 
@@ -150,7 +150,7 @@ audio {
   position: absolute;
   background-color: var(--color-dark-orange);
   animation: move-up 3s infinite ease-in-out;
-  border-radius: 3.3125rem 1.5rem 1.875rem 0;
+  border-radius: 3.3125rem 1rem 1.875rem 0;
 }
 
 .duck__nostril {
@@ -447,7 +447,7 @@ audio {
     transform: translateY(0);
   }
   5% {
-    transform: translateY(0.05rem);
+    transform: translateY(0.1rem);
   }
   10% {
     transform: translateY(0);
