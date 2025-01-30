@@ -22,6 +22,10 @@ body {
   height: 100%;
 }
 
+html {
+  font-size: max(calc(16 * min(100vw / 500, 100vh / 500)), 0px);
+}
+
 body {
   height: 100%;
   display: flex;
@@ -33,14 +37,14 @@ body {
 }
 
 .duck {
-  width: 300px;
+  width: 18.75rem;
   position: relative;
 }
 
 .duck__head-wrapper {
-  width: 151px;
-  height: 150px;
-  margin-left: 40px;
+  width: 9.4375rem;
+  height: 9.375rem;
+  margin-left: 2.5rem;
   position: relative;
 }
 
@@ -54,20 +58,20 @@ body {
 }
 
 .duck__eyebrow {
-  top: 32px;
-  right: 42px;
-  width: 30px;
-  height: 10px;
-  border-radius: 7px;
+  top: 2rem;
+  right: 2.625rem;
+  width: 1.875rem;
+  height: 0.625rem;
+  border-radius: 0.4375rem;
   position: absolute;
   background-color: var(--color-light-yellow);
 }
 
 .duck__eye {
-  top: 47px;
-  right: 31px;
-  width: 53px;
-  height: 54px;
+  top: 2.9375rem;
+  right: 1.9375rem;
+  width: 3.3125rem;
+  height: 3.375rem;
   display: flex;
   border-radius: 50%;
   position: absolute;
@@ -79,26 +83,26 @@ body {
 .duck__eye::before {
   content: "";
   width: 100%;
-  height: 10px;
-  bottom: -1.5px;
+  height: 0.625rem;
+  bottom: -0.09375rem;
   position: absolute;
   background-color: var(--color-yellow);
 }
 
 .duck__eye::after {
   content: "";
-  width: 27px;
-  height: 27px;
+  width: 1.6875rem;
+  height: 1.6875rem;
   border-radius: 50%;
   position: absolute;
   background-color: var(--color-black);
 }
 
 .duck__mouth {
-  top: 57px;
-  left: -39px;
-  width: 90px;
-  height: 53px;
+  top: 3.5625rem;
+  left: -2.4375rem;
+  width: 5.625rem;
+  height: 3.3125rem;
   position: absolute;
 }
 
@@ -107,9 +111,9 @@ body {
   z-index: 7;
   content: "";
   width: 100%;
-  height: 42px;
+  height: 2.625rem;
   position: absolute;
-  border-radius: 0 37px 0 39px;
+  border-radius: 0 2.3125rem 0 2.4375rem;
   background-color: var(--color-orange);
 }
 
@@ -118,29 +122,29 @@ body {
   bottom: 0;
   z-index: 6;
   content: "";
-  width: 81px;
-  height: 18px;
+  width: 5.0625rem;
+  height: 1.125rem;
   position: absolute;
-  border-radius: 53px 20px 30px 0;
+  border-radius: 3.3125rem 1.25rem 1.875rem 0;
   background-color: var(--color-dark-orange);
 }
 
 .duck__nostril {
-  top: 63px;
-  left: 5px;
+  top: 3.9375rem;
+  left: 0.3125rem;
   z-index: 7;
-  width: 16px;
-  height: 7px;
+  width: 1rem;
+  height: 0.4375rem;
   position: absolute;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   background-color: var(--color-dark-orange);
 }
 
 .duck__ears {
   top: 0;
   left: 50%;
-  width: 80px;
-  height: 41px;
+  width: 5rem;
+  height: 2.5625rem;
   position: absolute;
 }
 
@@ -149,10 +153,10 @@ body {
   left: 0;
   z-index: 4;
   content: "";
-  width: 69px;
-  height: 24px;
+  width: 4.3125rem;
+  height: 1.5rem;
   position: absolute;
-  border-radius: 0 7px 28px 0;
+  border-radius: 0 0.4375rem 1.75rem 0;
   background-color: var(--color-yellow);
 }
 
@@ -161,36 +165,36 @@ body {
   bottom: 0;
   z-index: 3;
   content: "";
-  width: 37px;
-  height: 22px;
+  width: 2.3125rem;
+  height: 1.375rem;
   position: absolute;
-  border-radius: 0 7px 28px 0;
+  border-radius: 0 0.4375rem 1.75rem 0;
   background-color: var(--color-orange);
 }
 
 .duck__body {
   z-index: 8;
-  width: 220px;
-  height: 130px;
-  margin-top: -10px;
-  margin-left: 40px;
+  width: 13.75rem;
+  height: 8.125rem;
+  margin-top: -0.625rem;
+  margin-left: 2.5rem;
   position: relative;
-  border-radius: 95px;
+  border-radius: 5.9375rem;
   background-color: var(--color-yellow);
 }
 
 .duck__wing {
-  top: -20px;
-  right: -40px;
-  width: 171px;
-  height: 111px;
+  top: -1.25rem;
+  right: -2.5rem;
+  width: 10.6875rem;
+  height: 6.9375rem;
   position: absolute;
 }
 
 .duck__wing::before {
   left: 0;
   content: "";
-  width: 113px;
+  width: 7.0625rem;
   height: 100%;
   position: absolute;
   border-radius: 50%;
@@ -198,20 +202,20 @@ body {
 }
 
 .duck__wing::after {
-  right: 1px;
+  right: 0.0625rem;
   content: "";
-  width: 113px;
+  width: 7.0625rem;
   height: 100%;
   position: absolute;
-  border-radius: 0 191px 0 0;
+  border-radius: 0 11.9375rem 0 0;
   background-color: var(--color-light-yellow);
 }
 
 .duck__tail {
   top: 0;
-  right: 53px;
-  width: 160px;
-  height: 215px;
+  right: 3.3125rem;
+  width: 10rem;
+  height: 13.4375rem;
   position: absolute;
 }
 
@@ -220,8 +224,8 @@ body {
   left: 0;
   z-index: 2;
   content: "";
-  width: 113px;
-  height: 138px;
+  width: 7.0625rem;
+  height: 8.625rem;
   position: absolute;
   border-radius: 50%;
   background-color: var(--color-pink);
@@ -232,8 +236,8 @@ body {
   bottom: 0;
   z-index: 1;
   content: "";
-  width: 111.88px;
-  height: 139.32px;
+  width: 6.9925rem;
+  height: 8.7075rem;
   border-radius: 50%;
   position: absolute;
   transform: rotate(-14deg);
@@ -241,20 +245,20 @@ body {
 }
 
 .duck__legs-wrapper {
-  width: 86px;
-  height: 37px;
+  width: 5.375rem;
+  height: 2.3125rem;
   position: relative;
-  margin-left: 105px;
+  margin-left: 6.5625rem;
 }
 
 .duck__legs-wrapper::before {
   left: 0;
   bottom: 0;
   content: "";
-  width: 54px;
-  height: 12px;
+  width: 3.375rem;
+  height: 0.75rem;
   position: absolute;
-  border-radius: 8.5px;
+  border-radius: 0.53125rem;
   background-color: var(--color-dark-orange);
 }
 
@@ -262,16 +266,16 @@ body {
   right: 0;
   bottom: 0;
   content: "";
-  width: 54px;
-  height: 12px;
+  width: 3.375rem;
+  height: 0.75rem;
   position: absolute;
-  border-radius: 8.5px;
+  border-radius: 0.53125rem;
   background-color: var(--color-orange);
 }
 
 .duck__legs {
-  right: 18px;
-  width: 42px;
+  right: 1.125rem;
+  width: 2.625rem;
   height: 100%;
   position: absolute;
   background-color: var(--color-pink);
@@ -280,7 +284,7 @@ body {
 .duck__legs::before {
   left: 0;
   content: "";
-  width: 12px;
+  width: 0.75rem;
   height: 100%;
   position: absolute;
   background-color: var(--color-dark-orange);
@@ -289,16 +293,16 @@ body {
 .duck__legs::after {
   right: 0;
   content: "";
-  width: 12px;
+  width: 0.75rem;
   height: 100%;
   position: absolute;
   background-color: var(--color-orange);
 }
 
 .ground {
-  height: 14px;
-  width: 200px;
-  margin-left: 60px;
-  border-radius: 12px;
+  height: 0.875rem;
+  width: 12.5rem;
+  margin-left: 3.75rem;
+  border-radius: 0.75rem;
   background-color: var(--color-dark-pink);
 }
