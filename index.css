@@ -388,6 +388,7 @@ audio {
   border-radius: 5px;
   padding: 15px 30px;
   font-family: inherit;
+  transition: 0.1s ease;
   color: var(--color-white);
   background-color: transparent;
 }
@@ -398,8 +399,12 @@ audio {
   background-color: var(--color-translucent-pink);
 }
 
-#yes-button {
+#yes-button, #no-button:hover {
   background-color: var(--color-pink);
+}
+
+#yes-button:hover {
+  background-color: var(--color-dark-pink);
 }
 
 .fade-out-animation {
