@@ -136,21 +136,21 @@ audio {
   height: 2.625rem;
   position: absolute;
   background-color: var(--color-orange);
-  border-radius: 0 2.3125rem 0.2rem 2.4375rem;
+  border-radius: 0 2.3125rem 0 2.4375rem;
   animation: move-down 3s infinite ease-in-out;
 }
 
 .duck__mouth::after {
-  right: 0;
   bottom: 0;
   z-index: 6;
   content: "";
+  right: 0.01rem;
   width: 5.0625rem;
   height: 1.125rem;
   position: absolute;
+  border-radius: 3.3125rem 1rem 1.8rem 0;
   background-color: var(--color-dark-orange);
   animation: move-up 3s infinite ease-in-out;
-  border-radius: 3.3125rem 1rem 1.875rem 0;
 }
 
 .duck__nostril {
